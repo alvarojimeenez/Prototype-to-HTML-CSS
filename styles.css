@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:  1.5em;
+}
+
+#web{
+    background-color: mediumseagreen;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 
+        80px 
+        repeat(3,minmax(0,272px)) 
+        ;
+    grid-gap: 5px 5px;
+    grid-template-rows: 
+        1fr 
+        250px
+        repeat(4,minmax(0,272px))
+        50px
+    ;
+    grid-template-areas: 
+        "header featured_header featured_header featured_header featured_main featured_main"
+        "header featured_header featured_header featured_header featured_main featured_main"
+        "header featured_header featured_header featured_header featured_profile featured_profile2"
+        "header content content content content content"
+        "header content content content content content"
+        "header content content content content content"
+        "header content content content content content"
+        "header content content content content content"
+        "header footer footer footer footer footer"
+        ;
+    
+}
+
+.header{
+    background-color: green;
+    grid-area: header;
+}
+
+.featured_header{
+    background-color: purple;
+    grid-area: featured_header;
+}
+
+.featured_main{
+    background-color: orange;
+    grid-area: featured_main;
+}
+.featured_profile{
+    background-color: blue;
+    grid-area: featured_profile;
+}
+.featured_profile2{
+    background-color: salmon;
+    grid-area: featured_profile2;
+}
+.content{
+    background-color: black;
+    grid-area: content;
+}
+.footer{
+    background-color: gray;
+    grid-area: footer;
+}
+
+
+@media screen and (max-width: 480px) {
+    #web{
+        grid-template-areas: 
+        "header header header header header header"
+        "featured_header featured_header featured_header featured_header featured_header featured_header"
+        "featured_main featured_main featured_main featured_main featured_main featured_main"
+        "featured_profile featured_profile featured_profile featured_profile featured_profile featured_profile"
+        "featured_profile2 featured_profile2 featured_profile2 featured_profile2 featured_profile2 featured_profile2"
+        "content content content content content content"
+        "content content content content content content"
+        "content content content content content content"
+        "content content content content content content"
+        "content content content content content content"
+        "footer footer footer footer footer footer"
+        ;
+    }
+}
